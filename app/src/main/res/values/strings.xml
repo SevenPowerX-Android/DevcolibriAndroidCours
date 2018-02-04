@@ -8,4 +8,6 @@
     <string name="message_b2_ock_listener">Привет способом OnClickListener!!! для кнопки v2</string>
     <string name="message_b1_ock_listener">Привет способом OnClickListener!!! для кнопки v1</string>
     <string name="message_sayHello">Привет способ onClick(\"sayHello\")!!!</string>
+    <string name="button_view_goto_new_activity">GoTo New Activity</string>
+    <string name="button_view_back">Back</string>
 </resources>
