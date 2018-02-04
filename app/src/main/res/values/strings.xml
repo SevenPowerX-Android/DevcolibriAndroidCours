@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">DevcolibriAndroidCours</string>
-    <string name="button_hello">Hello Привет!</string>
+    <string name="button_hello">Hello Привет Вариант1 !!!</string>
     <string name="text_hello">Hello World!</string>
+    <string name="button_var2">Привет Вариант 2 !!!</string>
+    <string name="button_v1_onclicklistener">V1_OnClickListener</string>
+    <string name="button_v2_onclicklistener">V2_OnClickListener</string>
+    <string name="message_b2_ock_listener">Привет способом OnClickListener!!! для кнопки v2</string>
+    <string name="message_b1_ock_listener">Привет способом OnClickListener!!! для кнопки v1</string>
+    <string name="message_sayHello">Привет способ onClick(\"sayHello\")!!!</string>
 </resources>
