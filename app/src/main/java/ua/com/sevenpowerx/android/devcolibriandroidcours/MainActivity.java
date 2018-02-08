@@ -5,11 +5,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
+
+    private EditText login;
+    private EditText password;
+
+    private TextView txtLogin;
+    private TextView txtPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,20 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(R.string.message_b1_ock_listener);
             }
         });
+        login = findViewById(R.id.login);
+        password = findViewById(R.id.password);
+
+        txtLogin = findViewById(R.id.text_login);
+        txtPass = findViewById(R.id.text_pass);
+        if (login == null && password == null) {
+            txtLogin.setText("логин отсутствует");
+            txtPass.setText("пароль отсутствует");
+        } else {
+            txtLogin.setText(login.getText());
+            txtPass.setText(password.getText());
+
+        }
+
 
     }
 
@@ -45,6 +66,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToNewActivity(View view){
         Intent intent = new Intent(MainActivity.this,LastActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToFirstActivity(View view) {
+        Intent intent = new Intent(this, FirstActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToLogin(View view) {
+        Intent intent = new Intent(this, Login.class);
+
+//        intent.putExtra("log","main login");
+//        intent.putExtra("pass", "main password");
+        intent.putExtra("log",txtLogin.getText());
+        intent.putExtra("pass", txtPass.getText());
+
         startActivity(intent);
     }
 }

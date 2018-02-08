@@ -23,4 +23,9 @@ public class LastActivity extends Activity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void goToFirstActivity(View view) {
+        Intent intent = new Intent(this, FirstActivity.class);
+        startActivity(intent);
+    }
 }
