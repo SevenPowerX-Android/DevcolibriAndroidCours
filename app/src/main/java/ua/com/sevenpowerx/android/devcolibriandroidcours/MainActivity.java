@@ -48,24 +48,18 @@ public class MainActivity extends AppCompatActivity {
 
         txtLogin = findViewById(R.id.text_login);
         txtPass = findViewById(R.id.text_pass);
-        if (login == null && password == null) {
-            txtLogin.setText("логин отсутствует");
-            txtPass.setText("пароль отсутствует");
-        } else {
-            txtLogin.setText(login.getText());
-            txtPass.setText(password.getText());
-
-        }
 
 
+        txtLogin.setText(getIntent().getStringExtra("log_login"));
+        txtPass.setText(getIntent().getStringExtra("pass_login"));
     }
 
     public void sayHello(View view) {
         textView.setText(R.string.message_sayHello);
     }
 
-    public void goToNewActivity(View view){
-        Intent intent = new Intent(MainActivity.this,LastActivity.class);
+    public void goToNewActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, LastActivity.class);
         startActivity(intent);
     }
 
@@ -79,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
 //        intent.putExtra("log","main login");
 //        intent.putExtra("pass", "main password");
-        intent.putExtra("log",txtLogin.getText());
-        intent.putExtra("pass", txtPass.getText());
+             intent.putExtra("log_main",txtLogin.getText());
+           intent.putExtra("pass_main", txtPass.getText());
 
         startActivity(intent);
     }
