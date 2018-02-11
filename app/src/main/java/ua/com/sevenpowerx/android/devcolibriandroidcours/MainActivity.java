@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        textView = findViewById(R.id.textView);
+        textView = (TextView) findViewById(R.id.textView);
 
         Button button_hello = findViewById(R.id.button_var1_listener);
         Button button_hello_v2 = findViewById(R.id.button_var2_listener);
@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(R.string.message_b1_ock_listener);
             }
         });
-        login = findViewById(R.id.login);
-        password = findViewById(R.id.password);
+        login = (EditText)findViewById(R.id.login);
+        password = (EditText)findViewById(R.id.password);
 
-        txtLogin = findViewById(R.id.text_login);
-        txtPass = findViewById(R.id.text_pass);
+        txtLogin = (TextView)findViewById(R.id.text_login);
+        txtPass = (TextView)findViewById(R.id.text_pass);
 
 
         txtLogin.setText(getIntent().getStringExtra("log_login"));
