@@ -3,10 +3,12 @@ package ua.com.sevenpowerx.android.devcolibriandroidcours;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
         button_hello_v2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 textView.setText(R.string.message_b2_ock_listener);
+                showToast(v,textView.getText().toString());
             }
         });
 
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView.setText(R.string.message_b1_ock_listener);
+                showToast(v, textView.getText().toString());
             }
         });
         login = (EditText)findViewById(R.id.login);
@@ -55,7 +60,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sayHello(View view) {
+        String str;
         textView.setText(R.string.message_sayHello);
+        str = textView.getText().toString();
+        showToast(view,str);
     }
 
     public void goToNewActivity(View view) {
@@ -64,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToFirstActivity(View view) {
+
         Intent intent = new Intent(this, FirstActivity.class);
         startActivity(intent);
     }
@@ -77,5 +86,11 @@ public class MainActivity extends AppCompatActivity {
            intent.putExtra("pass_main", txtPass.getText());
 
         startActivity(intent);
+    }
+
+    public void showToast(View view,String string) {
+        Toast toast = Toast.makeText(getApplicationContext(), string, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER,0,-380);
+        toast.show();
     }
 }
