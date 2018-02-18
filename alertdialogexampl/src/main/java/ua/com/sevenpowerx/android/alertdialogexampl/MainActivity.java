@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         builder.setMessage("Привет!!!");*/
 
 
-        builder.setTitle("SevenPowerX 20018.").
+        builder.setTitle("SevenPowerX 2018.").
                 setMessage("Привет!!!")
                 .setCancelable(true)
-                .setIcon(R.drawable.ic_launcher_foreground)
+//                .setIcon(R.drawable.ic_launcher_foreground)
                 .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
