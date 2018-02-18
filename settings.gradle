@@ -1,1 +1,2 @@
+include ':app', ':activityresultexam', ':alertdialogexampl'
 include ':app', ':activityresultexam', ':managerlinerlyaout'
