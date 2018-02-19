@@ -29,19 +29,19 @@ public class MainActivity extends AppCompatActivity {
                 .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "You not !!!", Toast.LENGTH_SHORT);
+                        Toast.makeText(getApplicationContext(), "You not !!!", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setPositiveButton("Да", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "Вы согласны !!!", Toast.LENGTH_SHORT);
+                        Toast.makeText(getApplicationContext(), "Вы согласны !!!", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setOnCancelListener(new DialogInterface.OnCancelListener() {
                     @Override
                     public void onCancel(DialogInterface dialog) {
-                        Toast.makeText(getApplicationContext(), "Вы проигнорировали нас!!!", Toast.LENGTH_SHORT);
+                        Toast.makeText(getApplicationContext(), "Вы проигнорировали нас!!!", Toast.LENGTH_SHORT).show();
                     }
                 });
         AlertDialog alertDialog = builder.create();
