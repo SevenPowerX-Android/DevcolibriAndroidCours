@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1.5"
         android:gravity="bottom"
-        android:text="Button_2" />
+        android:onClick="onClickButtonCenterToastMessage"
+        android:text="Toast Message" />
 
     <Button
         android:id="@+id/button3"

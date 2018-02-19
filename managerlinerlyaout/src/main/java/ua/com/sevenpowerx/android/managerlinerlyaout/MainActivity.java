@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClicvkLinerLayout(View v) {
-        Intent intent = new Intent(MainActivity.this, TestLinaerLayout.class);
+        Intent intent = new Intent(MainActivity.this, TestLinearLayout.class);
         startActivity(intent);
 
     }
